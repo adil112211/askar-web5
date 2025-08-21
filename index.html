@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewLS Kazakhstan - Логистические решения</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <span class="logo">NewLS</span>
+                </div>
+                
+                <nav class="header__nav" id="nav">
+                    <ul class="nav__list">
+                        <li><a href="#" class="nav__link active" data-page="home" data-key="home">Главная</a></li>
+                        <li><a href="#" class="nav__link" data-page="services" data-key="services">Услуги</a></li>
+                        <li><a href="#" class="nav__link" data-page="about" data-key="about">О нас</a></li>
+                        <li><a href="#" class="nav__link" data-page="contacts" data-key="contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <span class="flag">🇷🇺</span>
+                            <span class="lang-text">RU</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <button class="language-option" data-lang="kk">🇰🇿 KZ</button>
+                            <button class="language-option" data-lang="ru">🇷🇺 RU</button>
+                            <button class="language-option" data-lang="en">🇬🇧 EN</button>
+                            <button class="language-option" data-lang="zh">🇨🇳 中文</button>
+                        </div>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero__background"></div>
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title" data-key="hero_title">Надежный логистический партнер в Казахстане</h1>
+                        <p class="hero__subtitle" data-key="hero_subtitle">Мы решаем логистические задачи любой сложности</p>
+                        <div class="hero__actions">
+                            <button class="btn btn--primary hero__btn" data-key="get_consultation">Получить консультацию</button>
+                            <button class="btn btn--outline hero__btn" data-action="scroll-to-services" data-key="our_services">Наши услуги</button>
+                        </div>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <div class="stat__number">6+</div>
+                            <div class="stat__label" data-key="years_experience">лет опыта</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">500+</div>
+                            <div class="stat__label" data-key="satisfied_clients">довольных клиентов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">15+</div>
+                            <div class="stat__label" data-key="countries">стран</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">24/7</div>
+                            <div class="stat__label" data-key="support">поддержка</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Overview -->
+            <section class="services-overview" id="services-section">
+                <div class="container">
+                    <h2 class="section__title" data-key="our_services">Наши услуги</h2>
+                    <div class="services-grid">
+                        <div class="service-card" data-service="maritime">
+                            <div class="service-card__icon">🚢</div>
+                            <h3 class="service-card__title" data-key="maritime_title">Морские контейнерные перевозки</h3>
+                            <p class="service-card__description" data-key="maritime_short_desc">Международные перевозки ведущими морскими линиями</p>
+                            <button class="btn btn--primary service-card__btn" data-page="maritime" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="railway">
+                            <div class="service-card__icon">🚂</div>
+                            <h3 class="service-card__title" data-key="railway_title">Железнодорожные перевозки</h3>
+                            <p class="service-card__description" data-key="railway_short_desc">Эффективные транзитные перевозки через Казахстан</p>
+                            <button class="btn btn--primary service-card__btn" data-page="railway" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="automotive">
+                            <div class="service-card__icon">🚛</div>
+                            <h3 class="service-card__title" data-key="automotive_title">Автомобильные перевозки</h3>
+                            <p class="service-card__description" data-key="automotive_short_desc">Гибкие решения для перевозки любых грузов</p>
+                            <button class="btn btn--primary service-card__btn" data-page="automotive" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="warehousing">
+                            <div class="service-card__icon">🏭</div>
+                            <h3 class="service-card__title" data-key="warehousing_title">Складские услуги</h3>
+                            <p class="service-card__description" data-key="warehousing_short_desc">Современные решения для хранения и обработки грузов</p>
+                            <button class="btn btn--primary service-card__btn" data-page="warehousing" data-key="learn_more">Узнать больше</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advantages Section -->
+            <section class="advantages">
+                <div class="container">
+                    <h2 class="section__title" data-key="our_advantages">Наши преимущества</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">💪</div>
+                            <h3 class="advantage-card__title" data-key="great_opportunities">Большие возможности</h3>
+                            <ul class="advantage-card__list">
+                                <li data-key="container_periods">Дополнительные сроки свободного использования контейнеров</li>
+                                <li data-key="own_fleet">Собственный автопарк современных автомобилей</li>
+                                <li data-key="own_bills">Возможность выпуска собственных коносаментов</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🎯</div>
+                            <h3 class="advantage-card__title" data-key="vast_experience">Огромный опыт</h3>
+                            <ul class="advantage-card__list">
+                                <li data-key="professional_since">Профессиональная деятельность с 2019 года</li>
+                                <li data-key="various_cargo">Работа с различными грузами: металлопрокат, химикаты, стройматериалы</li>
+                                <li data-key="dangerous_cargo">Специализация на опасных и крупногабаритных грузах</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">⚡</div>
+                            <h3 class="advantage-card__title" data-key="main_advantage">Основное преимущество</h3>
+                            <ul class="advantage-card__list">
+                                <li data-key="constant_containers">Постоянное наличие контейнеров за счет собственных поступлений</li>
+                                <li data-key="own_infrastructure">Собственная инфраструктура и современные технологии</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🚀</div>
+                            <h3 class="advantage-card__title" data-key="minimum_timeframes">Минимальные сроки</h3>
+                            <ul class="advantage-card__list">
+                                <li data-key="info_exchange">Отлаженная система обмена информацией</li>
+                                <li data-key="modern_technologies">Современные информационные технологии</li>
+                                <li data-key="time_zones">Оперативность работы в разных часовых поясах</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calculator Section -->
+            <section class="calculator">
+                <div class="container">
+                    <h2 class="section__title" data-key="shipping_calculator">Калькулятор доставки</h2>
+                    <div class="calculator__form">
+                        <div class="form-group">
+                            <label class="form-label" data-key="from">Откуда:</label>
+                            <select class="form-control">
+                                <option data-key="select_city">Выберите город</option>
+                                <option>Алматы</option>
+                                <option>Астана</option>
+                                <option>Шымкент</option>
+                                <option>Атырау</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-key="to">Куда:</label>
+                            <select class="form-control">
+                                <option data-key="select_city">Выберите город</option>
+                                <option>Москва</option>
+                                <option>Шанхай</option>
+                                <option>Дубай</option>
+                                <option>Стамбул</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-key="weight">Вес (кг):</label>
+                            <input type="number" class="form-control" placeholder="1000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-key="cargo_type">Тип груза:</label>
+                            <select class="form-control">
+                                <option data-key="general_cargo">Генеральный груз</option>
+                                <option data-key="container">Контейнер</option>
+                                <option data-key="bulk_cargo">Навалочный груз</option>
+                            </select>
+                        </div>
+                        <button class="btn btn--primary" id="calculateBtn" data-key="calculate">Рассчитать</button>
+                    </div>
+                    <div class="calculator__result" id="calculatorResult"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services List Page -->
+        <div class="page" id="services-page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-key="our_services">Наши услуги</h1>
+                    <p class="page-subtitle" data-key="services_subtitle">Полный спектр логистических решений</p>
+                </div>
+            </section>
+
+            <section class="services-list">
+                <div class="container">
+                    <div class="services-grid">
+                        <div class="service-card" data-service="maritime">
+                            <div class="service-card__icon">🚢</div>
+                            <h3 class="service-card__title" data-key="maritime_title">Морские контейнерные перевозки</h3>
+                            <p class="service-card__description" data-key="maritime_short_desc">Международные перевозки ведущими морскими линиями</p>
+                            <div class="service-card__features">
+                                <span class="feature-tag">OOCL</span>
+                                <span class="feature-tag">MSC</span>
+                                <span class="feature-tag">Hapag Lloyd</span>
+                                <span class="feature-tag">CMA CGM</span>
+                            </div>
+                            <button class="btn btn--primary service-card__btn" data-page="maritime" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="railway">
+                            <div class="service-card__icon">🚂</div>
+                            <h3 class="service-card__title" data-key="railway_title">Железнодорожные перевозки</h3>
+                            <p class="service-card__description" data-key="railway_short_desc">Эффективные транзитные перевозки через Казахстан</p>
+                            <div class="service-card__features">
+                                <span class="feature-tag">Алматы</span>
+                                <span class="feature-tag">Астана</span>
+                                <span class="feature-tag">Шымкент</span>
+                                <span class="feature-tag">Атырау</span>
+                            </div>
+                            <button class="btn btn--primary service-card__btn" data-page="railway" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="automotive">
+                            <div class="service-card__icon">🚛</div>
+                            <h3 class="service-card__title" data-key="automotive_title">Автомобильные перевозки</h3>
+                            <p class="service-card__description" data-key="automotive_short_desc">Гибкие решения для перевозки любых грузов</p>
+                            <div class="service-card__features">
+                                <span class="feature-tag">82-120 м³</span>
+                                <span class="feature-tag">Тент</span>
+                                <span class="feature-tag">Металл</span>
+                                <span class="feature-tag">Спецтранспорт</span>
+                            </div>
+                            <button class="btn btn--primary service-card__btn" data-page="automotive" data-key="learn_more">Узнать больше</button>
+                        </div>
+                        <div class="service-card" data-service="warehousing">
+                            <div class="service-card__icon">🏭</div>
+                            <h3 class="service-card__title" data-key="warehousing_title">Складские услуги</h3>
+                            <p class="service-card__description" data-key="warehousing_short_desc">Современные решения для хранения и обработки грузов</p>
+                            <div class="service-card__features">
+                                <span class="feature-tag">Автоматизация</span>
+                                <span class="feature-tag">Упаковка</span>
+                                <span class="feature-tag">Маркировка</span>
+                                <span class="feature-tag">Температурный режим</span>
+                            </div>
+                            <button class="btn btn--primary service-card__btn" data-page="warehousing" data-key="learn_more">Узнать больше</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Maritime Service Page -->
+        <div class="page" id="maritime-page">
+            <section class="service-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="#" data-page="home" data-key="home">Главная</a>
+                        <span>/</span>
+                        <a href="#" data-page="services" data-key="services">Услуги</a>
+                        <span>/</span>
+                        <span data-key="maritime_title">Морские контейнерные перевозки</span>
+                    </div>
+                    <div class="service-hero__content">
+                        <div class="service-hero__icon">🚢</div>
+                        <h1 class="service-hero__title" data-key="maritime_title">Морские контейнерные перевозки</h1>
+                        <p class="service-hero__subtitle" data-key="maritime_full_desc">NewLS Kazakhstan является крупнейшим оператором рынка контейнерных перевозок и специализируется на логистике импортных/экспортных грузов в контейнерах таких морских линий, как: OOCL, MSC, Hapag Lloyd, CMA CGM, Hyundai, FESCO. Мы обеспечиваем полный сервис для грузов любого объема.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-details">
+                <div class="container">
+                    <div class="service-details__grid">
+                        <div class="service-info">
+                            <h3 data-key="partners">Партнеры</h3>
+                            <div class="partners-grid">
+                                <div class="partner-card">OOCL</div>
+                                <div class="partner-card">MSC</div>
+                                <div class="partner-card">Hapag Lloyd</div>
+                                <div class="partner-card">CMA CGM</div>
+                                <div class="partner-card">Hyundai</div>
+                                <div class="partner-card">FESCO</div>
+                            </div>
+                            
+                            <h3 data-key="features">Особенности услуги</h3>
+                            <ul class="advantages-list">
+                                <li data-key="partnership_oocl">Партнерство с OOCL, MSC, Hapag Lloyd, CMA CGM</li>
+                                <li data-key="full_forwarding">Полный спектр экспедиторских услуг</li>
+                                <li data-key="all_container_sizes">Контейнеры всех стандартных размеров</li>
+                                <li data-key="customs_clearance">Таможенное оформление и документооборот</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-form">
+                            <h3 data-key="order_service">Заказать услугу</h3>
+                            <form class="order-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" data-key-placeholder="your_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" data-key-placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон" data-key-placeholder="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Описание груза" data-key-placeholder="cargo_description" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width" data-key="send_request">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="back-to-services">
+                        <button class="btn btn--outline" data-page="services" data-key="back_to_services">Назад к услугам</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Railway Service Page -->
+        <div class="page" id="railway-page">
+            <section class="service-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="#" data-page="home" data-key="home">Главная</a>
+                        <span>/</span>
+                        <a href="#" data-page="services" data-key="services">Услуги</a>
+                        <span>/</span>
+                        <span data-key="railway_title">Железнодорожные перевозки</span>
+                    </div>
+                    <div class="service-hero__content">
+                        <div class="service-hero__icon">🚂</div>
+                        <h1 class="service-hero__title" data-key="railway_title">Железнодорожные перевозки</h1>
+                        <p class="service-hero__subtitle" data-key="railway_full_desc">Мы предоставляем клиенту подвижной состав (фитинговые платформы, контейнеры), который находится в оперативном управлении нашей компании. Развивая собственную инфраструктуру, мы обеспечиваем качественное сервисное обслуживание, снижение себестоимости перевозки и точное соблюдение сроков доставки.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-details">
+                <div class="container">
+                    <div class="service-details__grid">
+                        <div class="service-info">
+                            <h3 data-key="routes">Основные маршруты</h3>
+                            <div class="routes-grid">
+                                <div class="route-card">Алматы</div>
+                                <div class="route-card">Астана</div>
+                                <div class="route-card">Шымкент</div>
+                                <div class="route-card">Атырау</div>
+                                <div class="route-card">Достық</div>
+                                <div class="route-card">Алтынкөл</div>
+                            </div>
+                            
+                            <h3 data-key="features">Особенности услуги</h3>
+                            <ul class="advantages-list">
+                                <li data-key="own_rolling_stock">Собственный подвижной состав</li>
+                                <li data-key="fitting_platforms">Фитинговые платформы и контейнеры</li>
+                                <li data-key="main_routes">Маршруты: Алматы, Астана, Шымкент, Атырау</li>
+                                <li data-key="precise_delivery">Точное соблюдение сроков доставки</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-form">
+                            <h3 data-key="order_service">Заказать услугу</h3>
+                            <form class="order-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" data-key-placeholder="your_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" data-key-placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон" data-key-placeholder="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Описание груза" data-key-placeholder="cargo_description" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width" data-key="send_request">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="back-to-services">
+                        <button class="btn btn--outline" data-page="services" data-key="back_to_services">Назад к услугам</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Automotive Service Page -->
+        <div class="page" id="automotive-page">
+            <section class="service-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="#" data-page="home" data-key="home">Главная</a>
+                        <span>/</span>
+                        <a href="#" data-page="services" data-key="services">Услуги</a>
+                        <span>/</span>
+                        <span data-key="automotive_title">Автомобильные перевозки</span>
+                    </div>
+                    <div class="service-hero__content">
+                        <div class="service-hero__icon">🚛</div>
+                        <h1 class="service-hero__title" data-key="automotive_title">Автомобильные перевозки</h1>
+                        <p class="service-hero__subtitle" data-key="automotive_full_desc">Для осуществления автомобильных перевозок используются тентованные и цельнометаллические автомобили с грузовым пространством от 82 до 120 куб.м, малотоннажные автомобили и специализированный подвижной состав для перевозки негабаритных и тяжеловесных грузов.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-details">
+                <div class="container">
+                    <div class="service-details__grid">
+                        <div class="service-info">
+                            <h3 data-key="vehicle_types">Типы транспорта</h3>
+                            <div class="vehicle-types">
+                                <div class="vehicle-card">
+                                    <h4 data-key="tent_vehicles">Тентованные автомобили</h4>
+                                    <p data-key="capacity_82_120">Вместимость: 82-120 куб.м</p>
+                                </div>
+                                <div class="vehicle-card">
+                                    <h4 data-key="metal_vehicles">Цельнометаллические</h4>
+                                    <p data-key="capacity_82_120">Вместимость: 82-120 куб.м</p>
+                                </div>
+                                <div class="vehicle-card">
+                                    <h4 data-key="specialized_vehicles">Спецтранспорт</h4>
+                                    <p data-key="for_oversized">Для негабаритных грузов</p>
+                                </div>
+                                <div class="vehicle-card">
+                                    <h4 data-key="light_vehicles">Малотоннажные</h4>
+                                    <p data-key="for_urgent">Для срочных грузов</p>
+                                </div>
+                            </div>
+                            
+                            <h3 data-key="features">Особенности услуги</h3>
+                            <ul class="advantages-list">
+                                <li data-key="vehicles_82_120">Автомобили с грузовым пространством 82-120 куб.м</li>
+                                <li data-key="tent_metal_bodies">Тентованные и цельнометаллические кузова</li>
+                                <li data-key="specialized_oversized">Специализированный транспорт для негабарита</li>
+                                <li data-key="light_urgent">Малотоннажные автомобили для срочных грузов</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-form">
+                            <h3 data-key="order_service">Заказать услугу</h3>
+                            <form class="order-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" data-key-placeholder="your_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" data-key-placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон" data-key-placeholder="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Описание груза" data-key-placeholder="cargo_description" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width" data-key="send_request">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="back-to-services">
+                        <button class="btn btn--outline" data-page="services" data-key="back_to_services">Назад к услугам</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Warehousing Service Page -->
+        <div class="page" id="warehousing-page">
+            <section class="service-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="#" data-page="home" data-key="home">Главная</a>
+                        <span>/</span>
+                        <a href="#" data-page="services" data-key="services">Услуги</a>
+                        <span>/</span>
+                        <span data-key="warehousing_title">Складские услуги</span>
+                    </div>
+                    <div class="service-hero__content">
+                        <div class="service-hero__icon">🏭</div>
+                        <h1 class="service-hero__title" data-key="warehousing_title">Складские услуги</h1>
+                        <p class="service-hero__subtitle" data-key="warehousing_full_desc">Наши современные склады оборудованы автоматизированными системами и предлагают все виды услуг по хранению и подготовке грузов. Доступны услуги складской логистики, перераспределения, упаковки и маркировки.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-details">
+                <div class="container">
+                    <div class="service-details__grid">
+                        <div class="service-info">
+                            <h3 data-key="warehouse_services">Виды услуг</h3>
+                            <div class="warehouse-services">
+                                <div class="service-item">
+                                    <h4 data-key="storage">Хранение грузов</h4>
+                                    <p data-key="storage_desc">Краткосрочное и долгосрочное хранение</p>
+                                </div>
+                                <div class="service-item">
+                                    <h4 data-key="sorting">Сортировка</h4>
+                                    <p data-key="sorting_desc">Подготовка и консолидация грузов</p>
+                                </div>
+                                <div class="service-item">
+                                    <h4 data-key="packaging">Упаковка</h4>
+                                    <p data-key="packaging_desc">Профессиональная упаковка грузов</p>
+                                </div>
+                                <div class="service-item">
+                                    <h4 data-key="labeling">Маркировка</h4>
+                                    <p data-key="labeling_desc">Нанесение необходимой маркировки</p>
+                                </div>
+                            </div>
+                            
+                            <h3 data-key="features">Особенности услуги</h3>
+                            <ul class="advantages-list">
+                                <li data-key="automated_systems">Автоматизированные складские системы</li>
+                                <li data-key="packaging_labeling">Услуги по упаковке и маркировке</li>
+                                <li data-key="logistics_redistribution">Складская логистика и перераспределение</li>
+                                <li data-key="temperature_storage">Температурные режимы хранения</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-form">
+                            <h3 data-key="order_service">Заказать услугу</h3>
+                            <form class="order-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" data-key-placeholder="your_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" data-key-placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон" data-key-placeholder="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Описание груза" data-key-placeholder="cargo_description" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width" data-key="send_request">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="back-to-services">
+                        <button class="btn btn--outline" data-page="services" data-key="back_to_services">Назад к услугам</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about-page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-key="about">О нас</h1>
+                    <p class="page-subtitle" data-key="about_subtitle">NewLS Kazakhstan - ваш надежный партнер в логистике</p>
+                </div>
+            </section>
+
+            <section class="about-content">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h3 data-key="our_story">Наша история</h3>
+                            <p data-key="company_description">NewLS Kazakhstan - современная логистическая компания, основанная в 2019 году. Мы специализируемся на контейнерных, морских, железнодорожных и автомобильных перевозках.</p>
+                            <p data-key="company_mission">Наша миссия - обеспечивать эффективные и надежные логистические решения для бизнеса любого масштаба.</p>
+                            <p data-key="company_slogan">Уверены, что мы сможем найти эффективные решения для Вашего бизнеса!</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <div class="about-stat__number">2019</div>
+                                <div class="about-stat__label" data-key="founded">Основана</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat__number">500+</div>
+                                <div class="about-stat__label" data-key="satisfied_clients">Довольных клиентов</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat__number">15+</div>
+                                <div class="about-stat__label" data-key="countries">Стран</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat__number">24/7</div>
+                                <div class="about-stat__label" data-key="support">Поддержка</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contacts Page -->
+        <div class="page" id="contacts-page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-key="contacts">Контакты</h1>
+                    <p class="page-subtitle" data-key="contacts_subtitle">Свяжитесь с нами</p>
+                </div>
+            </section>
+
+            <section class="contacts-content">
+                <div class="container">
+                    <div class="contacts-grid">
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <h3 data-key="almaty">Алматы</h3>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-key="almaty_address">ул. Сатпаева, 30/1</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (727) 350-00-00</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>almaty@newls.kz</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <h3 data-key="astana">Астана</h3>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-key="astana_address">ул. Кокшетау, 15</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (7172) 700-00-00</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>astana@newls.kz</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <h3 data-key="send_message">Отправить сообщение</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" data-key-placeholder="your_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" data-key-placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон" data-key-placeholder="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Сообщение" data-key-placeholder="message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary" data-key="send">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">NewLS</div>
+                    <p class="footer__description" data-key="footer_description">Надежный логистический партнер в Казахстане</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 data-key="quick_links">Быстрые ссылки</h4>
+                        <ul>
+                            <li><a href="#" data-page="home" data-key="home">Главная</a></li>
+                            <li><a href="#" data-page="about" data-key="about">О нас</a></li>
+                            <li><a href="#" data-page="contacts" data-key="contacts">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 data-key="services">Услуги</h4>
+                        <ul>
+                            <li><a href="#" data-page="maritime" data-key="maritime_title">Морские перевозки</a></li>
+                            <li><a href="#" data-page="railway" data-key="railway_title">Железнодорожные перевозки</a></li>
+                            <li><a href="#" data-page="automotive" data-key="automotive_title">Автоперевозки</a></li>
+                            <li><a href="#" data-page="warehousing" data-key="warehousing_title">Складские услуги</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 data-key="contacts">Контакты</h4>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i> info@newls.kz</li>
+                            <li><i class="fas fa-globe"></i> www.newls.kz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 NewLS Kazakhstan. <span data-key="all_rights_reserved">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="modal">
+        <div class="modal__backdrop">
+            <div class="modal__content">
+                <button class="modal__close" id="modalClose">&times;</button>
+                <div class="modal__body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
